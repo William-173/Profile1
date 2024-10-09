@@ -1,0 +1,136 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.logo-container {
+    margin: 20px 0; /* Adjust spacing as needed */
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.profile-image-container {
+    position: relative; /* Allow absolute positioning of name */
+    display: inline-block; /* Keep image and name together */
+}
+
+.profile-name {
+    font-size: 2em;
+    text-shadow: 0 0 5px blue, 0 0 10px red; /* Blue and red shadow */
+    position: relative; /* Position below the image */
+    top: 10px; /* Space between image and name */
+    color: white; /* Base color */
+    animation: glitch 1s infinite; /* Glitch animation */
+}
+
+.glitch {
+    animation: glitch 1s infinite; /* Glitch animation */
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 
+            2px -2px 0 red, 
+            -2px 2px 0 blue, 
+            -1px -1px 0 red, 
+            1px 1px 0 blue; /* Offset for glitch effect */
+        transform: translate(0);
+    }
+    20% {
+        text-shadow: 
+            -2px -2px 0 red, 
+            2px 2px 0 blue, 
+            1px -1px 0 red, 
+            -1px 1px 0 blue; /* Offset for glitch effect */
+        transform: translate(-1px, 1px); /* Slight shift */
+    }
+    40% {
+        text-shadow: 
+            -2px 2px 0 red, 
+            2px -2px 0 blue, 
+            1px 1px 0 red, 
+            -1px -1px 0 blue; /* Offset for glitch effect */
+        transform: translate(1px, -1px); /* Slight shift */
+    }
+    100% {
+        text-shadow: 
+            2px -2px 0 red, 
+            -2px 2px 0 blue, 
+            -1px -1px 0 red, 
+            1px 1px 0 blue; /* Reset shadow */
+        transform: translate(0);
+    }
+}
+
+.profile-image {
+    border: 5px solid purple; /* Purple border */
+    border-radius: 50%; /* Circular image */
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    animation: shadow-glitch 1s infinite; /* Blue and red shadow animation */
+}
+
+.glitch-shadow {
+    animation: shadow-glitch 1s infinite; /* Glitch animation for shadow */
+}
+
+@keyframes shadow-glitch {
+    0% {
+        box-shadow: 5px 5px 0 blue, -5px -5px 0 red; /* Initial shadow */
+    }
+    20% {
+        box-shadow: -5px -5px 0 blue, 5px 5px 0 red; /* Shift shadow */
+    }
+    40% {
+        box-shadow: 5px -5px 0 blue, -5px 5px 0 red; /* Shift shadow */
+    }
+    100% {
+        box-shadow: 5px 5px 0 blue, -5px -5px 0 red; /* Reset shadow */
+    }
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    background-color: purple;
+    border: 2px solid darkpurple; /* Dark purple border */
+    color: white;
+    border-radius: 25px; /* Round buttons */
+    padding: 10px 20px; /* Adjust padding */
+    margin: 10px; /* Spacing between buttons */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkviolet; /* Change color on hover */
+}
+
+#forum {
+    background-color: #333; /* Dark background for forum */
+    border: 2px solid purple; /* Purple border around forum */
+    padding: 20px; /* Spacing inside forum */
+    border-radius: 10px; /* Rounded corners */
+    width: 300px; /* Reduced width */
+    height: auto; /* Height adjusts based on content */
+    margin: 20px auto; /* Center the forum */
+}
+
+.forum-field {
+    margin: 10px 0; /* Spacing between fields */
+}
+
+.forum-field input, .forum-field select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Adjust padding */
+    border: 1px solid purple; /* Purple border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    background-color: #444; /* Dark background for inputs */
+    color: white; /* Text color for inputs */
+}
